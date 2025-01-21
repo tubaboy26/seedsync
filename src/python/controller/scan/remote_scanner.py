@@ -51,7 +51,7 @@ class RemoteScanner(IScanner):
             self._install_scanfs()
 
         try:
-            out = self.__ssh.shell("'{}' '{}'".format(
+            out = self.__ssh.shell("{} {}".format(
                 self.__remote_path_to_scan_script,
                 self.__remote_path_to_scan)
             )
